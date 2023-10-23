@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicSunTestTask.Application", "DynamicSunTestTask.Application", "{23259889-7819-4023-A48F-2A2314278CBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicSunTestTask.Data", "DynamicSunTestTask.Data", "{F08F27A1-117E-4C79-9DB2-AEFA027AFDB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicSunTestTask.Domain", "DynamicSunTestTask.Domain", "{BF51D2FD-7BC9-45FF-9AA6-9C42E44B92FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicSunTestTask.Infrastructure", "DynamicSunTestTask.Infrastructure", "{D96EE729-404B-41DA-A3F2-DC2CC20D0979}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicSunTestTask.Application", "DynamicSunTestTask.Application\DynamicSunTestTask.Application\DynamicSunTestTask.Application.csproj", "{917734E1-AE34-4435-837E-B11E118F97CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicSunTestTask.Data.EntityFrameworkCore", "DynamicSunTestTask.Data\DynamicSunTestTask.Data.EntityFrameworkCore\DynamicSunTestTask.Data.EntityFrameworkCore.csproj", "{B2128006-C243-430C-B466-CC2E845A4780}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicSunTestTask.Domain.RelationalDatabase", "DynamicSunTestTask.Domain\DynamicSunTestTask.Domain.RelationalDatabase\DynamicSunTestTask.Domain.RelationalDatabase.csproj", "{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicSunTestTask.Infrastructure.Common", "DynamicSunTestTask.Infrastructure\DynamicSunTestTask.Infrastructure.Common\DynamicSunTestTask.Infrastructure.Common.csproj", "{1271D050-35E5-4644-B424-2F22B556DFF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicSunTestTask.Parsers", "DynamicSunTestTask.Infrastructure\DynamicSunTestTask.Parsers\DynamicSunTestTask.Parsers.csproj", "{3341B234-8A58-49AD-85F3-BB11B3EAF937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{917734E1-AE34-4435-837E-B11E118F97CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917734E1-AE34-4435-837E-B11E118F97CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917734E1-AE34-4435-837E-B11E118F97CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917734E1-AE34-4435-837E-B11E118F97CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2128006-C243-430C-B466-CC2E845A4780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2128006-C243-430C-B466-CC2E845A4780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2128006-C243-430C-B466-CC2E845A4780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2128006-C243-430C-B466-CC2E845A4780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1271D050-35E5-4644-B424-2F22B556DFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1271D050-35E5-4644-B424-2F22B556DFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1271D050-35E5-4644-B424-2F22B556DFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1271D050-35E5-4644-B424-2F22B556DFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3341B234-8A58-49AD-85F3-BB11B3EAF937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3341B234-8A58-49AD-85F3-BB11B3EAF937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3341B234-8A58-49AD-85F3-BB11B3EAF937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3341B234-8A58-49AD-85F3-BB11B3EAF937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{917734E1-AE34-4435-837E-B11E118F97CB} = {23259889-7819-4023-A48F-2A2314278CBC}
+		{B2128006-C243-430C-B466-CC2E845A4780} = {F08F27A1-117E-4C79-9DB2-AEFA027AFDB4}
+		{4B95988F-A2C5-4DFA-B038-AD7E4A1BD70A} = {BF51D2FD-7BC9-45FF-9AA6-9C42E44B92FE}
+		{1271D050-35E5-4644-B424-2F22B556DFF7} = {D96EE729-404B-41DA-A3F2-DC2CC20D0979}
+		{3341B234-8A58-49AD-85F3-BB11B3EAF937} = {D96EE729-404B-41DA-A3F2-DC2CC20D0979}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FD81415-BEBD-4306-A770-7AAA6AE2FA1E}
+	EndGlobalSection
+EndGlobal

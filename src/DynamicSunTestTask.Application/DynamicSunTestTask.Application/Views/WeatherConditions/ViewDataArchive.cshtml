@@ -1,0 +1,94 @@
+﻿@model DynamicSunTestTask.Application.ViewModels.ViewDataArchiveViewModel
+
+<div class="container mt-5 mx-0">
+    <div class="card">
+        <div class="card-body">
+            <form action="ViewDataArchive" method="get">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <input asp-for="Year" name="year" class="form-control" placeholder="Год">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <input asp-for="Month" name="month" class="form-control" placeholder="Месяц">
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <div class="mb-3">
+                                <button type="submit" class="btn" style="background-color: #FF8787; color: white" 
+                                   asp-action="ViewDataArchive"
+                                   asp-route-page="@(Model.PageViewModel.PageNumber - 1)" >
+                                    Поиск
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Город</th>
+                            <th scope="col">Дата</th>
+                            <th scope="col">Время (местное)</th>
+                            <th scope="col">Температура воздуха, гр. Ц.</th>
+                            <th scope="col">Отн. влажность воздуха, %</th>
+                            <th scope="col">Точка росы, гр. Ц.</th>
+                            <th scope="col">Атм. давление, мм рт.ст.</th>
+                            <th scope="col">Направление ветра</th>
+                            <th scope="col">Скорость ветра, м/с</th>
+                            <th scope="col">Облачность, %</th>
+                            <th scope="col">Нижняя граница облачности, м</th>
+                            <th scope="col">Горизонтальная видимость, км</th>
+                            <th scope="col">Погодные явления</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var dto in Model.WeatherConditions)
+                        {
+                            <tr>
+                                <th>@dto.City.Name</th>
+                                <td>@dto.LocalDate</td>
+                                <td>@dto.LocalTime</td>
+                                <td>@dto.AirTemperature</td>
+                                <td>@dto.AirRelativeHumidityAsPercentage</td>
+                                <td>@dto.DewPointInDegreesCelsius</td>
+                                <td>@dto.AtmosphericPressureInMmHg</td>
+                                <td>@dto.WindDirection</td>
+                                <td>@dto.WindSpeedInMetersPerSecond</td>
+                                <td>@dto.CloudCoverAsPercentage</td>
+                                <td>@dto.LowerCloudLimitInMeters</td>
+                                <td>@dto.HorizontalVisibility</td>
+                                <td>@dto.WeatherPhenomena</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center p-4">
+                @if (Model.PageViewModel.HasPreviousPage)
+                {
+                    <a asp-action="ViewDataArchive" class="btn btn-outline-dark m-1"
+                       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+                       asp-route-month="@Model.Month"
+                       asp-route-year="@Model.Year">
+                        &lt; Назад
+                    </a>
+                }
+                @if (Model.PageViewModel.HasNextPage)
+                {
+                    <a asp-action="ViewDataArchive" class="btn btn-outline-dark m-1"
+                       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+                       asp-route-month="@Model.Month"
+                       asp-route-year="@Model.Year">
+                        Вперед &gt;
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
